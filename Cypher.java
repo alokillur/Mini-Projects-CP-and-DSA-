@@ -20,6 +20,10 @@ public class Cypher
 	}
 	public static void encode(String str,int key)
 	{
+		if(key>26)
+		{
+			key=key%26;
+		}
 		StringBuilder sb=new StringBuilder();
 		for(int i=0;i<str.length();i++)
 		{
@@ -36,6 +40,10 @@ public class Cypher
 	}
 	public static void decode(String str,int key)
 	{
+		if(key>26)
+		{
+			key=key%26;
+		}
 		StringBuilder sb=new StringBuilder();
 		for(int i=0;i<str.length();i++)
 		{
@@ -52,4 +60,3 @@ public class Cypher
 		System.out.println(sb.toString());
 	}
 }
-
