@@ -2,7 +2,6 @@ package ai001;
 
 import java.util.Random;
 import java.util.Scanner;
-
 public class Password_Generator {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
@@ -17,17 +16,31 @@ public class Password_Generator {
 		
 		int total=d+l+s;
 		int count=0;
+		int count1 = 0,count2=0,count3=0;
 		Random random=new Random();
 		while(count!=total) {
-			int pick=random.nextInt(9)%3;
-			if(pick==1) 
+			int pick=random.nextInt(10)%3;
+			if(pick==1 && count1<d) {
 				sb.append(random.nextInt(9));
-			else if(pick==2) 
+				count1++;
+				count++;
+				System.out.println(sb.toString());
+			}
+			else if(pick==0 && count3<s) {
+				int z=random.nextInt(20);
+				sb.append(symb[z]);
+				count3++;
+				count++;
+				System.out.println(sb.toString());
+			}
+			else if(pick==2 && count2<l) {
 				sb.append((char)(Math.random()*26+65));
-			else
-				sb.append(symb[random.nextInt(20)]);
-			count++;
+				count2++;
+				count++;
+				System.out.println(sb.toString());
+			}
 		}
+		System.out.print("Password Generated:"+" ");
 		System.out.println(sb.toString());
 	}
 }
