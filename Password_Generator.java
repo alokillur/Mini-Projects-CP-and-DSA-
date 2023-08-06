@@ -1,5 +1,3 @@
-package ai001;
-
 import java.util.Random;
 import java.util.Scanner;
 public class Password_Generator {
