@@ -24,20 +24,17 @@ public class Password_Generator {
 				sb.append(random.nextInt(9));
 				count1++;
 				count++;
-				System.out.println(sb.toString());
 			}
 			else if(pick==0 && count3<s) {
 				int z=random.nextInt(20);
 				sb.append(symb[z]);
 				count3++;
 				count++;
-				System.out.println(sb.toString());
 			}
 			else if(pick==2 && count2<l) {
 				sb.append((char)(Math.random()*26+65));
 				count2++;
 				count++;
-				System.out.println(sb.toString());
 			}
 		}
 		System.out.print("Password Generated:"+" ");
