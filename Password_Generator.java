@@ -1,6 +1,6 @@
 import java.util.Random;
 import java.util.Scanner;
-public class Password_Generator {
+class Password_Generator {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		StringBuilder sb=new StringBuilder();
